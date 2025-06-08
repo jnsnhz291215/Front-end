@@ -1,0 +1,14 @@
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.che {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 400px 150px;
+    text-decoration: none;
+    border-radius: 5px;
+}
