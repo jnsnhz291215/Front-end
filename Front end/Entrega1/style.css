@@ -1,39 +1,89 @@
 body {
   margin: 0;
   padding-top: 150px;   /* Altura del rectángulo horizontal */
-  padding-left: 80px;   /* Ancho del rectángulo vertical */
+  padding-left: 355px;   /* Ancho del rectángulo vertical */
   font-family: sans-serif;
+  background-color: beige;
 }
 
     
 .rectangulo-horizontal {
-      position: fixed;
-      top: 0;   
-      left: 0;
-      width: 100%;
-      height: 150px;
-      background-color: #007bff;
-      color: rgb(255, 255, 255);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  z-index: 1;
 }
-
+.contenido1 {
+  padding-left: 400px; /* Mueve solo el contenido hacia la derecha */
+}
 .rectangulo-vertical {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80px;
+  width: 350px;
   height: 100%;
-  background-color: #ff5722;
+  background-color: #882000;
   color: white;
-  writing-mode: vertical-rl;
+  writing-mode: horizontal-tb;
   text-align: center;
   font-weight: bold;
   padding-top: 20px;
   z-index: 2; /* capa superior */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-perfil {
+  width: 150px;    /* ancho del contenedor de la imagen */
+  height: 150px;   /* alto del contenedor */
+  margin: 0 auto 20px auto; /* centrado horizontal y espacio abajo */
+
+}
+.imagen-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* escala la imagen para que entre bien */
+  display: block;       /* elimina espacio abajo en imágenes inline */
+  border: 3px solid white; /* borde blanco de 3px */
+  border-radius: 50%;       /* bordes redondeados opcionales */
+}
+
+.datos-personales {
+  list-style-type: none; /* Eliminar viñetas */
+  padding-left: 20px;
+  text-align: left;
+  margin-left: 2%;
+}
+
+.habilidades {
+  list-style-type: square;
+  padding-left: 20px;  /* Deja espacio para la viñeta */
+  text-align: left;
+  margin-left: 2%;
+}
+
+.educacion {
+  list-style-type: none;
+  padding-left: 20px;  /* Deja espacio para la viñeta */
+  text-align: left;
+  margin-left: 2%;
+}
+
+.idiomas {
+  list-style-type: none;
+  padding-left: 20px;  /* Deja espacio para la viñeta */
+  text-align: left;
+  margin-left: 2%;
+}
+.licencia {
+  list-style-type: none;
+  padding-left: 20px;  /* Deja espacio para la viñeta */
+  text-align: left;
+  margin-left: 2%;
 }
