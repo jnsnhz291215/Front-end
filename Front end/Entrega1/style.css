@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding-top: 150px;   /* Altura del rectángulo horizontal */
+  padding-left: 80px;   /* Ancho del rectángulo vertical */
+  font-family: sans-serif;
+}
+
+    
+.rectangulo-horizontal {
+      position: fixed;
+      top: 0;   
+      left: 0;
+      width: 100%;
+      height: 150px;
+      background-color: #007bff;
+      color: rgb(255, 255, 255);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.rectangulo-vertical {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  background-color: #ff5722;
+  color: white;
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 20px;
+  z-index: 2; /* capa superior */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
