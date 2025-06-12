@@ -84,5 +84,19 @@ body {
 
 .contenido3 ul {
   padding-left: 20px;
-  list-style-type: disc;
+}
+.imagenes-pequenas {
+  display: flex;
+  gap: 15px; /* espacio entre imágenes */
+  margin: 10px 15px; /* margen arriba y abajo para separar de listas */
+  justify-content: start; /* alinea a la izquierda */
+}
+
+.imagenes-pequenas img {
+  width: auto; /* tamaño pequeño */
+  height: 90px; /* mantiene proporción */
+  border-radius: 5px; /* opcional: bordes redondeados */
+  background-color: white;   /* fondo blanco */
+  padding: 5px;              /* espacio entre imagen y borde del fondo */
+  box-shadow: 0 0 5px rgba(0,0,0,0.1); /* opcional, sombra sutil */
 }
