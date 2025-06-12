@@ -48,7 +48,8 @@ body {
   object-fit: contain;  /* escala la imagen para que entre bien */
   display: block;       /* elimina espacio abajo en imágenes inline */
   border: 3px solid white; /* borde blanco de 3px */
-  border-radius: 50%;       /* bordes redondeados opcionales */
+  border-radius: 50%;  
+  margin-top: 10px;     /* bordes redondeados opcionales */
 }
 
 .contenido2 {
