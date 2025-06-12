@@ -24,20 +24,17 @@ body {
   padding-left: 400px; /* Mueve solo el contenido hacia la derecha */
 }
 .rectangulo-vertical {
-  position: fixed;
+  position: absolute; /* o simplemente eliminar */
   top: 0;
   left: 0;
   width: 350px;
-  height: 100%;
+  min-height: 100vh;
   background-color: #882000;
   color: white;
-  writing-mode: horizontal-tb;
-  text-align: center;
-  font-weight: bold;
-  padding-top: 20px;
-  z-index: 2; /* capa superior */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  z-index: 2;
 }
+
 
 .imagen-perfil {
   width: 150px;    /* ancho del contenedor de la imagen */
@@ -54,36 +51,38 @@ body {
   border-radius: 50%;       /* bordes redondeados opcionales */
 }
 
-.datos-personales {
-  list-style-type: none; /* Eliminar viñetas */
+.contenido2 {
+  padding-right: 15px;
+}
+
+.contenido2 h2 {
+  margin-left: 20px;
+  margin-bottom: 5px; /* reduce espacio con lo de abajo */
+  font-size: 18px;
+}
+.contenido2 ul {
+  margin-top: 5px;
+  padding-left: 25px; /* para alinear con el h2 */
+  margin-bottom: 15px; /* opcional: para separar de la siguiente sección */
+}
+
+.contenido3 {
+  padding: 20px 30px;
+}
+
+.contenido3 h2 {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.contenido3 p, .contenido3 li {
+  font-size: 16px;
+  margin-bottom: 3px;
+  line-height: 1.5;
+}
+
+.contenido3 ul {
   padding-left: 20px;
-  text-align: left;
-  margin-left: 2%;
-}
-
-.habilidades {
-  list-style-type: square;
-  padding-left: 20px;  /* Deja espacio para la viñeta */
-  text-align: left;
-  margin-left: 2%;
-}
-
-.educacion {
-  list-style-type: none;
-  padding-left: 20px;  /* Deja espacio para la viñeta */
-  text-align: left;
-  margin-left: 2%;
-}
-
-.idiomas {
-  list-style-type: none;
-  padding-left: 20px;  /* Deja espacio para la viñeta */
-  text-align: left;
-  margin-left: 2%;
-}
-.licencia {
-  list-style-type: none;
-  padding-left: 20px;  /* Deja espacio para la viñeta */
-  text-align: left;
-  margin-left: 2%;
+  list-style-type: disc;
 }
