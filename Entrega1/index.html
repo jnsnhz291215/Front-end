@@ -5,12 +5,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script src="script.js"></script>
 
     <div class="rectangulo-horizontal">
         <div class="contenido1">
             <h1>Juan Alejandro Sanhueza Godoy</h1>
             <p>Ingeniería en Cyberseguridad</p>
         </div>
+            <button id="boton-toggle-centro" class="boton-estilo pulse">Ocultar sección central y mostrar un video genial de kratos</button>
     </div>
 
     <div class="rectangulo-vertical">
@@ -18,16 +20,18 @@
             <img src="img/luffyg5v2.jpg" alt="Imagen de perfil">
         </div>
         <div class="contenido2">
-            <h2>Contacto:</h2>
-            <ul>
-                <li>Telefono personal: (+56 9) 1234-5678</li>
-                <li>Correo: juan.sanhueza@example.com</li>
-                <li>Pagina web: www.sitioincreible.com</li>
-                <li>LinkedIn: linkedin.com/in/juan-sanhueza</li>
-                <li>GitHub: github.com/juan-sanhueza</li>
-                <li>Estado civil: Soltero</li>
-                <li>Nacionalidad: chileno</li>
-            </ul>
+            <button id="boton-contacto" class="boton-estilo pulse">Mostrar Contacto</button>
+            <div id="info-contacto" >
+                <h2>Contacto:</h2>
+                <ul>
+                    <li>Telefono personal: (+56 9) 1234-5678</li>
+                    <li>Correo: juan.sanhueza@example.com</li>
+                    <li>Pagina web: www.sitioincreible.com</li>
+                    <li>LinkedIn: linkedin.com/in/juan-sanhueza</li>
+                    <li>GitHub: github.com/juan-sanhueza</li>
+
+                </ul>
+            </div>
             <h2>Habilidades:</h2>
             <ul>
                 <li>Programación en Python</li>
@@ -37,8 +41,8 @@
             </ul>
             <h2>Educación:</h2>
             <ul>
-               <li>Instituto Sagrado Corazon de San Bernardo (2009 - 2021)</li>
-               <li>INACAP, Cyberseguridad (2024 - En curso)</li>
+                <li>Instituto Sagrado Corazon de San Bernardo (2009 - 2021)</li>
+                <li>INACAP, Cyberseguridad (2024 - En curso)</li>
             </ul>
             <div class="imagenes-pequenas">
                 <a href="https://colegioisc.cl/" target="_blank" >
@@ -60,12 +64,17 @@
         </div>
     </div>
 
+
+
     <div class="rectangulo-info">
         <div class="contenido3">
-            <h2> Acerca de mí:</h2>
-            <p>Nací en 2002, Soy un apasionado de la tecnología y la ciberseguridad. Me encanta aprender sobre nuevas herramientas y técnicas para proteger la información y los sistemas.</p>
-            <p>Me destaco por ser una persona comprometida, con gran capacidad de análisis, pensamiento crítico y atención al detalle. Disfruto trabajando en equipo y también soy capaz de desenvolverme con autonomía.</p>
-            <p>Actualmente estudio Ingeniería en Ciberseguridad en INACAP y busco oportunidades para aplicar mis conocimientos en entornos reales, contribuir a proyectos significativos y seguir desarrollándome como profesional en el área de la seguridad informática.</p>
+            <button id="boton-acerca" class="boton-estilo pulse-verde">Mostrar Acerca de mí</button>
+            <div id="info-acerca" class="info-oculta">
+                <h2> Acerca de mí:</h2>
+                <p>Nací en 2002, Soy un apasionado de la tecnología y la ciberseguridad. Me encanta aprender sobre nuevas herramientas y técnicas para proteger la información y los sistemas.</p>
+                <p>Me destaco por ser una persona comprometida, con gran capacidad de análisis, pensamiento crítico y atención al detalle. Disfruto trabajando en equipo y también soy capaz de desenvolverme con autonomía.</p>
+                <p>Actualmente estudio Ingeniería en Ciberseguridad en INACAP y busco oportunidades para aplicar mis conocimientos en entornos reales, contribuir a proyectos significativos y seguir desarrollándome como profesional en el área de la seguridad informática.</p>
+            </div>
             <h2>Experiencia Laboral:</h2>
             <ul>
                 <li>Empresa XYZ - Desarrollador Web (2018 - Presente)</li>
@@ -86,12 +95,28 @@
                 <li><strong>TaskPro:</strong> App de gestión de tareas hecha en Flask y MySQL (2025)</li>
                 <li><strong>Escáner de vulnerabilidades:</strong> Script en Python que detecta puertos abiertos</li>
             </ul>
-
-
-
-          
+            
         </div>
+        <div id="video-carga" style="display:none; text-align:center;">
+        <video autoplay loop muted playsinline
+        style="max-height: 400px; max-width: 100%;">
+        <source src="img/kratos.webm" type="video/webm">
+    </video>
+    <p>¡Disfruta del video de Kratos!</p>
     </div>
+    <div class="contact-form">
+    <h2>Contacto</h2>
+    <form id="form-contacto" novalidate>
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+        <br><br>
+        <button type="submit" class="boton-estilo">Enviar</button>
+        <p id="mensaje-error" style="color: #ff6666; display:none;"></p>
+        <p id="mensaje-exito" style="color: #66cc66; display:none;">Correo válido y enviado.</p>
+    </form>
+</div>
+
+</div>
 
 
 

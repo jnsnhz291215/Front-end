@@ -6,20 +6,6 @@ body {
   background-color: beige;
 }
 
-    
-.rectangulo-horizontal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background-color: #007bff;
-  color: white;
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  z-index: 1;
-}
 .contenido1 {
   padding-left: 400px; /* Mueve solo el contenido hacia la derecha */
 }
@@ -100,4 +86,127 @@ body {
   background-color: white;   /* fondo blanco */
   padding: 5px;              /* espacio entre imagen y borde del fondo */
   box-shadow: 0 0 5px rgba(0,0,0,0.1); /* opcional, sombra sutil */
+}
+
+
+#info-contacto {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+#info-contacto.visible {
+  max-height: 300px; /* o un valor que permita mostrar el contenido */
+  opacity: 1;
+}
+
+
+.pulse {
+  --color: #cc00ff;
+  --hover: #6f00ff;
+  color: var(--color);
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  transition: 0.25s;
+}
+
+.pulse:hover,
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+  border-color: var(--hover);
+  color: #000000;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+  100% {
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+  }
+}
+
+
+/* Botón verde con animación pulse */
+.pulse-verde {
+  --color: #064e03;      /* verde oscuro */
+  --hover: #0a7e07;      /* verde más claro para hover */
+  color: var(--color);
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.pulse-verde:hover,
+.pulse-verde:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+  border-color: var(--hover);
+  color: #000000;
+}
+
+/* Contenido oculto con animación */
+.info-oculta {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.info-oculta.visible {
+  max-height: 1000px; /* suficientemente grande para mostrar el contenido */
+  opacity: 1;
+}
+
+
+
+/* Botón para mostrar/ocultar contenido */
+.rectangulo-horizontal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  z-index: 1;
+  padding: 0 20px; /* margen horizontal */
+  justify-content: space-between; /* separa el título a la izquierda y el botón a la derecha */
+}
+
+#video-carga video {
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px; /* espacio entre el video y el rectángulo horizontal */
+}
+
+/* Para el correo */
+.contact-form {
+  margin-top: 30px;
+}
+
+.contact-form input[type="email"] {
+  padding: 8px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  margin-top: 10px;
 }
