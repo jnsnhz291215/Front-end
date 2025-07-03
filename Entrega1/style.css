@@ -1,32 +1,40 @@
 body {
   margin: 0;
-  padding-top: 150px;   /* separarse del rectángulo horizontal */
-  padding-left: 355px;   /* separarse del rectángulo vertical */
-  font-family: "Century Schoolbook", serif; /* fuente deseada, serif al final por si el dispositivo no la soporta */  
-  background-color: beige; /* color del fondo */
+  padding-top: 150px;   /* Altura del rectángulo horizontal */
+  padding-left: 355px;   /* Ancho del rectángulo vertical */
+  font-family: sans-serif;
+  background-color: beige;
 }
-/* el marging separa el objeto del entorno y el padding separa lo que hay dentro del final del objeto */
+
+    
 .rectangulo-horizontal {
-  position: fixed; /* hace que se quede en su lugar aunque se haga scroll */
-  width: 100%; /* ancho */
-  height: 150px; /* altura */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
   background-color: #007bff;
-  display: flex; /* sirve para ordenar mejor con  el modelo flexbox */
-  align-items: center; /* alinear al centro */
-  font-size: 18px; /* tamaño de la fuente */
-  z-index: 1; /* para definir la capa en la que se encuentra  */
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  z-index: 1;
 }
 .contenido1 {
   padding-left: 400px; /* Mueve solo el contenido hacia la derecha */
 }
 .rectangulo-vertical {
-  position: absolute; /* para que no se mueva de su lugar y sigue el scroll */  
+  position: absolute; /* o simplemente eliminar */
+  top: 0;
+  left: 0;
   width: 350px;
-  min-height: 100vh; /* altura minima, 100hv es 100% de altura del usuario */
+  min-height: 100vh;
   background-color: #882000;
-  overflow-y: auto;  /* para que siga el flujo en y */
-  z-index: 2; /* capa 2 para que quede encima del otro rectangulo */
+  color: white;
+  overflow-y: auto;
+  z-index: 2;
 }
+
 
 .imagen-perfil {
   width: 150px;    /* ancho del contenedor de la imagen */
@@ -40,12 +48,12 @@ body {
   object-fit: contain;  /* escala la imagen para que entre bien */
   display: block;       /* elimina espacio abajo en imágenes inline */
   border: 3px solid white; /* borde blanco de 3px */
-  border-radius: 50%;  /* para hacer que sea un ciculo */
-  margin-top: 10px;    /* espacio hacia arriba*/
+  border-radius: 50%;  
+  margin-top: 10px;     /* bordes redondeados opcionales */
 }
 
 .contenido2 {
-  padding-right: 15px; /* separacio hacia la derecha */
+  padding-right: 15px;
 }
 
 .contenido2 h2 {
@@ -60,7 +68,7 @@ body {
 }
 
 .contenido3 {
-  padding: 20px 30px; /* para que no choque con nada */
+  padding: 20px 30px;
 }
 
 .contenido3 h2 {
@@ -72,6 +80,7 @@ body {
 .contenido3 p, .contenido3 li {
   font-size: 16px;
   margin-bottom: 3px;
+  line-height: 1.5;
 }
 
 .contenido3 ul {
@@ -85,9 +94,10 @@ body {
 }
 
 .imagenes-pequenas img {
-  width: auto; 
-  height: 90px; 
-  border-radius: 5px; /* bordes redondeados */
-  background-color: white; /* fondo blanco */
+  width: auto; /* tamaño pequeño */
+  height: 90px; /* mantiene proporción */
+  border-radius: 5px; /* opcional: bordes redondeados */
+  background-color: white;   /* fondo blanco */
   padding: 5px;              /* espacio entre imagen y borde del fondo */
+  box-shadow: 0 0 5px rgba(0,0,0,0.1); /* opcional, sombra sutil */
 }
