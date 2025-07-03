@@ -10,15 +10,35 @@
     <div class="rectangulo-horizontal">
         <div class="contenido1">
             <h1>Juan Alejandro Sanhueza Godoy</h1>
-            <p>Ingeniería en Cyberseguridad</p>
+            <p>Nacionalidad: Chileno</p>
+            <p>Estado civil: Soltero</p>
+            <p>Estudiante de Ingeniería en Ciberseguridad</p>
         </div>
             <button id="boton-toggle-centro" class="boton-estilo pulse">Ocultar sección central y mostrar un video genial de kratos</button>
     </div>
 
     <div class="rectangulo-vertical">
-        <div class="imagen-perfil">
-            <img src="img/luffyg5v2.jpg" alt="Imagen de perfil">
+
+
+
+
+    <div class="imagen-perfil">
+    <div class="contenedor-volteo">
+        <div class="cara cara-frontal">
+        <img src="img/luffyg5v2.jpg" alt="Imagen de perfil">
+        <div class="texto-volteo">Haz clic para voltear</div>
         </div>
+        <div class="cara cara-trasera">
+        <img src="img/gwenlol.jpg" alt="Imagen alterna">
+        <div class="texto-volver">Volver</div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
         <div class="contenido2">
             <button id="boton-contacto" class="boton-estilo pulse">Mostrar Contacto</button>
             <div id="info-contacto" >
@@ -95,6 +115,18 @@
                 <li><strong>TaskPro:</strong> App de gestión de tareas hecha en Flask y MySQL (2025)</li>
                 <li><strong>Escáner de vulnerabilidades:</strong> Script en Python que detecta puertos abiertos</li>
             </ul>
+
+        <div class="contact-form">
+            <h2>Contacto</h2>
+            <form id="form-contacto" novalidate>
+                <label for="email">Correo electrónico:</label><br>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                <br><br>
+                <button type="submit" class="boton-estilo">Enviar</button>
+                <p id="mensaje-error" style="color: #ff6666; display:none;"></p>
+                <p id="mensaje-exito" style="color: #66cc66; display:none;">Correo válido y enviado.</p>
+            </form>
+        </div>
             
         </div>
         <div id="video-carga" style="display:none; text-align:center;">
@@ -104,19 +136,9 @@
     </video>
     <p>¡Disfruta del video de Kratos!</p>
     </div>
-    <div class="contact-form">
-    <h2>Contacto</h2>
-    <form id="form-contacto" novalidate>
-        <label for="email">Correo electrónico:</label><br>
-        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-        <br><br>
-        <button type="submit" class="boton-estilo">Enviar</button>
-        <p id="mensaje-error" style="color: #ff6666; display:none;"></p>
-        <p id="mensaje-exito" style="color: #66cc66; display:none;">Correo válido y enviado.</p>
-    </form>
-</div>
 
-</div>
+
+
 
 
 

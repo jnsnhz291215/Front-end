@@ -1,16 +1,28 @@
 body {
   margin: 0;
-  padding-top: 150px;   /* Altura del rectángulo horizontal */
-  padding-left: 355px;   /* Ancho del rectángulo vertical */
-  font-family: sans-serif;
+  padding-top: 150px;
+  padding-left: 355px;
+  font-family: "New Century Schoolbook", "Georgia", serif;
   background-color: beige;
 }
 
 .contenido1 {
-  padding-left: 400px; /* Mueve solo el contenido hacia la derecha */
+  padding-left: 400px;
 }
+.contenido1 h1 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 30px;
+  color: #ffffff;
+}
+.contenido1 p {
+  margin-top: 0;
+  margin-bottom: 1px;
+  color: #ccf2ff;
+}
+
 .rectangulo-vertical {
-  position: absolute; /* o simplemente eliminar */
+  position: absolute;
   top: 0;
   left: 0;
   width: 350px;
@@ -21,73 +33,52 @@ body {
   z-index: 2;
 }
 
-
-.imagen-perfil {
-  width: 150px;    /* ancho del contenedor de la imagen */
-  height: 150px;   /* alto del contenedor */
-  margin: 0 auto 20px auto; /* centrado horizontal y espacio abajo */
-
-}
-.imagen-perfil img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;  /* escala la imagen para que entre bien */
-  display: block;       /* elimina espacio abajo en imágenes inline */
-  border: 3px solid white; /* borde blanco de 3px */
-  border-radius: 50%;  
-  margin-top: 10px;     /* bordes redondeados opcionales */
-}
-
 .contenido2 {
   padding-right: 15px;
 }
-
 .contenido2 h2 {
   margin-left: 20px;
-  margin-bottom: 5px; /* reduce espacio con lo de abajo */
+  margin-bottom: 5px;
   font-size: 18px;
 }
 .contenido2 ul {
   margin-top: 5px;
-  padding-left: 25px; /* para alinear con el h2 */
-  margin-bottom: 15px; /* opcional: para separar de la siguiente sección */
+  padding-left: 25px;
+  margin-bottom: 15px;
 }
 
 .contenido3 {
   padding: 20px 30px;
 }
-
 .contenido3 h2 {
   font-size: 20px;
   margin-top: 5px;
   margin-bottom: 10px;
 }
-
-.contenido3 p, .contenido3 li {
+.contenido3 p,
+.contenido3 li {
   font-size: 16px;
   margin-bottom: 3px;
   line-height: 1.5;
 }
-
 .contenido3 ul {
   padding-left: 20px;
 }
+
 .imagenes-pequenas {
   display: flex;
-  gap: 15px; /* espacio entre imágenes */
-  margin: 10px 15px; /* margen arriba y abajo para separar de listas */
-  justify-content: start; /* alinea a la izquierda */
+  gap: 15px;
+  margin: 10px 15px;
+  justify-content: start;
 }
-
 .imagenes-pequenas img {
-  width: auto; /* tamaño pequeño */
-  height: 90px; /* mantiene proporción */
-  border-radius: 5px; /* opcional: bordes redondeados */
-  background-color: white;   /* fondo blanco */
-  padding: 5px;              /* espacio entre imagen y borde del fondo */
-  box-shadow: 0 0 5px rgba(0,0,0,0.1); /* opcional, sombra sutil */
+  width: auto;
+  height: 90px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-
 
 #info-contacto {
   max-height: 0;
@@ -95,49 +86,13 @@ body {
   overflow: hidden;
   transition: all 0.4s ease;
 }
-
 #info-contacto.visible {
-  max-height: 300px; /* o un valor que permita mostrar el contenido */
+  max-height: 300px;
   opacity: 1;
 }
 
-
-.pulse {
-  --color: #cc00ff;
-  --hover: #6f00ff;
-  color: var(--color);
-  background: none;
-  border: 2px solid;
-  font: inherit;
-  line-height: 1;
-  margin: 0.5em;
-  padding: 1em 2em;
-  transition: 0.25s;
-}
-
-.pulse:hover,
-.pulse:focus {
-  animation: pulse 1s;
-  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
-  border-color: var(--hover);
-  color: #000000;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 var(--hover);
-  }
-  100% {
-    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
-  }
-}
-
-
-/* Botón verde con animación pulse */
+.pulse,
 .pulse-verde {
-  --color: #064e03;      /* verde oscuro */
-  --hover: #0a7e07;      /* verde más claro para hover */
-  color: var(--color);
   background: none;
   border: 2px solid;
   font: inherit;
@@ -147,7 +102,18 @@ body {
   transition: 0.25s;
   cursor: pointer;
 }
-
+.pulse {
+  --color: #cc00ff;
+  --hover: #6f00ff;
+  color: var(--color);
+}
+.pulse-verde {
+  --color: #064e03;
+  --hover: #0a7e07;
+  color: var(--color);
+}
+.pulse:hover,
+.pulse:focus,
 .pulse-verde:hover,
 .pulse-verde:focus {
   animation: pulse 1s;
@@ -155,23 +121,26 @@ body {
   border-color: var(--hover);
   color: #000000;
 }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+  100% {
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+  }
+}
 
-/* Contenido oculto con animación */
 .info-oculta {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: all 0.4s ease;
 }
-
 .info-oculta.visible {
-  max-height: 1000px; /* suficientemente grande para mostrar el contenido */
+  max-height: 1000px;
   opacity: 1;
 }
 
-
-
-/* Botón para mostrar/ocultar contenido */
 .rectangulo-horizontal {
   position: fixed;
   top: 0;
@@ -184,21 +153,19 @@ body {
   align-items: center;
   font-size: 18px;
   z-index: 1;
-  padding: 0 20px; /* margen horizontal */
-  justify-content: space-between; /* separa el título a la izquierda y el botón a la derecha */
+  padding: 0 20px;
+  justify-content: space-between;
 }
 
 #video-carga video {
   max-width: 100%;
   height: auto;
-  margin-top: 50px; /* espacio entre el video y el rectángulo horizontal */
+  margin-top: 50px;
 }
 
-/* Para el correo */
 .contact-form {
   margin-top: 30px;
 }
-
 .contact-form input[type="email"] {
   padding: 8px;
   width: 250px;
@@ -206,7 +173,67 @@ body {
   border-radius: 4px;
   font-size: 16px;
 }
-
 .contact-form button {
   margin-top: 10px;
+}
+
+.imagen-perfil {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px auto;
+}
+.contenedor-volteo {
+  width: 100%;
+  height: 100%;
+  border: 3px solid white;
+  border-radius: 50%;
+  perspective: 1000px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.cara {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.8s ease, opacity 0.4s ease;
+}
+.cara-frontal img,
+.cara-trasera img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.texto-volteo, .texto-volver {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 6px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+
+}
+
+.contenedor-volteo:hover .cara-frontal img, .contenedor-volteo:hover .cara-trasera img {
+  opacity: 0.3;
+}
+.contenedor-volteo:hover .texto-volteo, .contenedor-volteo:hover .texto-volver {
+  opacity: 1;
+}
+.cara-trasera {
+  transform: rotateY(180deg);
+}
+.contenedor-volteo.volteado .cara-frontal {
+  transform: rotateY(180deg);
+}
+.contenedor-volteo.volteado .cara-trasera {
+  transform: rotateY(0deg);
 }
