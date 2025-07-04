@@ -84,7 +84,7 @@ body {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 #info-contacto.visible {
   max-height: 300px;
@@ -101,6 +101,7 @@ body {
   padding: 1em 2em;
   transition: 0.25s;
   cursor: pointer;
+  border-radius: 5px;
 }
 .pulse {
   --color: #cc00ff;
@@ -134,7 +135,7 @@ body {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 .info-oculta.visible {
   max-height: 1000px;
@@ -221,7 +222,6 @@ body {
   padding: 6px;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
-
 }
 
 .contenedor-volteo:hover .cara-frontal img, .contenedor-volteo:hover .cara-trasera img {
@@ -238,4 +238,61 @@ body {
 }
 .contenedor-volteo.volteado .cara-trasera {
   transform: rotateY(0deg);
+}
+
+.rectangulo-contacto {
+  margin-top: 30px;
+  padding-left: 20px;
+  max-width: 520px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.boton-contacto-form {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contenido-contacto {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  padding: 0 15px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  color: #333;
+}
+
+.contenido-contacto.visible {
+  max-height: 700px;
+  opacity: 1;
+  padding: 15px;
+}
+
+.contenido-contacto input,
+.contenido-contacto textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.mensaje-error {
+  color: #b00020;
+  font-weight: bold;
+  margin-top: 10px;
+  display: none;
+}
+
+.mensaje-exito {
+  color: #006400;
+  font-weight: bold;
+  margin-top: 10px;
+  display: none;
 }
