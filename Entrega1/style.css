@@ -178,9 +178,11 @@ body {
 }
 
 .imagen-perfil {
+  margin-left: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 150px;
   height: 150px;
-  margin: 0 auto 20px auto;
 }
 .contenedor-volteo {
   width: 100%;
